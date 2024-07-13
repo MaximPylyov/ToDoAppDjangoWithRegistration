@@ -1,0 +1,21 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+<div class="header-bar">
+    <h1>Вход</h1>
+</div>
+
+<div class="case-body">
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input class="button" type="submit" value="Войти">
+    </form>
+    <p>Нет учётной записи? <a href="{%url 'register' %}"> Зарегистрироваться</a></p>
+</div>
+
+
+
+
+
+{% endblock content %}
